@@ -13,6 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // alert('Seu formulário foi enviado!');
 
         // Redireciona para a segunda página
-        window.location.href = "/src/fe/obrigado.html"; // Altere para o caminho correto da sua página de destino
+        window.location.href = "obrigado.html"; // Altere para o caminho correto da sua página de destino
     });
 });
