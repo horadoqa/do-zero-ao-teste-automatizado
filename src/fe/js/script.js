@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         this.textContent = 'Enviado';
         this.disabled = true;
 
-        window.location.href = "src/fe/obrigado.html";
+        window.location.href = "obrigado.html";
 
     });
 
