@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" type="image/png" href="./images/hqa.png">
+    <script src="./js/script.js" defer></script>
+    <title>Hora do QA</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <img src="./images/hqa.png" alt="HQA">
+        </div>
+        <h1>Hora do QA</h1>
+
+        <div>
+            <h3>Escolha seu framework preferido</h3>
+            <select name="select-itens" id="select-itens">
+                <option value="1">Cypress</option>
+                <option value="2">Selenium</option>
+                <option value="3">Robot Framework</option>
+                <option value="4">Cucumber</option>
+            </select>
+        </div>
+
+        <div>
+            <h3>Conte sobre sua escolha</h3>
+            <textarea name="area" id="area" placeholder="Digite seu texto aqui"></textarea>
+        </div>
+
+        <h3>Preencha com suas informações</h3>
+
+        <div>
+            <form id="userForm">
+                <label for="name">Seu nome completo</label><br/>
+                <input type="text" id="name" name="firstname" placeholder="Digite aqui o seu nome"><br/>
+                
+                <label for="email">Seu e-mail preferido</label><br/>
+                <input type="text" id="email" name="email" placeholder="Digite aqui o seu e-mail"><br/>
+
+                <label for="phone">Número do seu celular</label><br/>
+                <input type="text" id="phone" name="phonenumber" placeholder="Número do seu celular"><br/>
+
+                <label for="country">Selecione o seu País</label><br/>
+                <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                    <option value="brasil">Brasil</option>
+                </select>
+            
+                <button id="submitButton">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
