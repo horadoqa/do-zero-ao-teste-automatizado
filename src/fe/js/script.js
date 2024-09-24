@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         this.textContent = 'Enviado';
         this.disabled = true;
 
-        window.location.href = "https://horadoqa.github.io/do-zero-ao-teste-automatizado/obrigado.html";
+        window.location.href = "obrigado.html";
 
     });
 
