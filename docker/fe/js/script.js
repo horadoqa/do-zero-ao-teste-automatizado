@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Envia os dados para o backend
         try {
             const userData = { name, email, phone, country, framework, comments };
-            const response = await fetch('http://localhost:5000/api/users', {
+            const response = await fetch('http://10.43.200.126:5000/api/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (response.ok) {
                 console.log('Dados salvos com sucesso!');
-                window.location.href = "obrigado.html"; 
+                window.location.href = "/obrigado.html"; 
             } else {
                 console.error('Erro ao salvar dados');
             }

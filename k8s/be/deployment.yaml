@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: be-horadoqa
+  namespace: horadoqa
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: be-horadoqa
+  template:
+    metadata:
+      labels:
+        app: be-horadoqa
+    spec:
+      containers:
+      - name: be-horadoqa
+        image: horadoqa/fe-horadoqa:v1.0.0
+        ports:
+        - containerPort: 5000
+        env:
+        - name: MONGODB_URI
+          value: "mongodb://mongo:27017/horadoqa-prod"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: be-horadoqa
+  namespace: horadoqa
+spec:
+  type: ClusterIP
+  ports:
+  - port: 5000
+    targetPort: 5000
+  selector:
+    app: be-horadoqa

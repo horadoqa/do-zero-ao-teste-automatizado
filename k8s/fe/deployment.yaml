@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fe-horadoqa
+  namespace: horadoqa
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fe-horadoqa
+  template:
+    metadata:
+      labels:
+        app: fe-horadoqa
+    spec:
+      containers:
+      - name: fe-horadoqa
+        image: horadoqa/fe-horadoqa:v2.0.0
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fe-horadoqa
+  namespace: horadoqa
+spec:
+  type: NodePort
+  # type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30000 # ou qualquer número entre 30000 e 32767
+  selector:
+    app: fe-horadoqa

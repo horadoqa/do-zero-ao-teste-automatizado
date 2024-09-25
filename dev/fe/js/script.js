@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (response.ok) {
                 console.log('Dados salvos com sucesso!');
-                window.location.href = "http://127.0.0.1:5501/projetos/horadoqa/src/fe/obrigado.html"; // Redireciona após salvar
+                window.location.href = "obrigado.html"; // Redireciona após salvar
             } else {
                 console.error('Erro ao salvar dados');
             }
