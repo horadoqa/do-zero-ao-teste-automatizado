@@ -18,6 +18,12 @@ mongoose.connect('mongodb://mongo:27017/horadoqa-prod').then(() => {
 app.use(cors());
 app.use(bodyParser.json());
 
+// Rota para obter usuários
+app.get('/api/users', (req, res) => {
+    // Lógica para retornar usuários
+    res.json([]);
+});
+
 // Rota para salvar o usuário
 app.post('/api/users', async (req, res) => {
     const { name, email, phone, country, framework, comments } = req.body;

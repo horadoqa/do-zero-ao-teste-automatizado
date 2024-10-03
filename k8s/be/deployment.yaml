@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: be-horadoqa
-        image: horadoqa/fe-horadoqa:v1.0.0
+        image: horadoqa/be-horadoqa:v1.0.0
         ports:
         - containerPort: 5000
         env:

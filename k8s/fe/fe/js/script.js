@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Envia os dados para o backend
         try {
             const userData = { name, email, phone, country, framework, comments };
-            const response = await fetch('http://10.43.251.211:5000/api/users', {
+            const response = await fetch('http://be-horadoqa:5000/api/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -61,7 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Dados salvos com sucesso!');
                 window.location.href = "/obrigado.html"; 
             } else {
-                console.error('Erro ao salvar dados');
+                const errorData = await response.json();
+                alert(`Erro ao salvar dados: ${errorData.message || 'Erro desconhecido'}`);
+                console.error('Erro ao salvar dados', errorData);
             }
         } catch (error) {
             console.error('Erro na requisição:', error);
